@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -41,11 +42,23 @@
             padding: 20px;
             text-align: center;
         }
-        section {
+        .section-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .section-container section {
+            flex: 1;
             padding: 20px;
             border-bottom: 1px solid #333;
+            min-width: 300px;
+        }
+        .section-container:nth-child(even) {
+            background-color: #1e1e1e;
         }
         @media (max-width: 768px) {
+            .section-container {
+                flex-direction: column;
+            }
             .container {
                 padding: 10px;
             }
@@ -79,33 +92,37 @@
         <p>Seu cantinho pra aprender a lidar com o dinheiro sem aperreio.</p>
     </header>
     <main class="container my-4">
-        <section id="introducao">
-            <h2>O que são Criptomoedas?</h2>
-            <p>Criptomoedas são moedas digitais descentralizadas que permitem transações diretas sem precisar de um cabra intermediário, como bancos ou governos.</p>
-        </section>
-        <section id="impacto-nordeste">
-            <h2>Importância das Criptomoedas para o Nordeste</h2>
-            <p>No Nordeste, onde muitas regiões enfrentam desafios econômicos, as criptomoedas vêm trazendo oportunidades. Com elas, empreendedores locais podem negociar globalmente sem as taxas abusivas dos bancos tradicionais. Além disso, trabalhadores informais podem receber pagamentos de qualquer lugar do mundo, sem depender de intermediários.</p>
-            <p>Outra vantagem é a inclusão financeira. Em locais onde bancos são escassos, criptomoedas permitem que qualquer pessoa com internet tenha acesso a um sistema financeiro seguro.</p>
-        </section>
-        <section id="vantagens">
-            <h2>Vantagens de Investir em Criptomoedas</h2>
-            <ul>
-                <li>Transações rápidas e seguras, sem precisar de banco.</li>
-                <li>Diversificação dos investimentos.</li>
-                <li>Proteção contra inflação e desvalorização da moeda.</li>
-                <li>Acesso a mercados globais sem precisar sair de casa.</li>
-            </ul>
-        </section>
-        <section id="politica">
-            <h2>O Impacto das Criptomoedas na Política</h2>
-            <p>As criptomoedas mudaram a forma como governos e instituições financeiras operam. Em países com economias instáveis, elas têm sido uma alternativa para a população escapar da hiperinflação e do controle estatal sobre o dinheiro.</p>
-            <p>No Brasil, algumas cidades já aceitam pagamentos com criptomoedas, e políticos discutem formas de regulamentação. No cenário global, algumas nações adotaram criptos como moeda oficial, enquanto outras tentam restringi-las.</p>
-        </section>
-        <section id="cuidados">
-            <h2>Cuidados ao Investir</h2>
-            <p>Antes de se jogar de cabeça, estude bem o mercado e não invista mais do que pode perder, visse? Evite promessas de dinheiro fácil e aprenda sobre segurança digital para não cair em golpes.</p>
-        </section>
+        <div class="section-container">
+            <section id="introducao">
+                <h2>O que são Criptomoedas?</h2>
+                <p>Criptomoedas são moedas digitais descentralizadas que permitem transações diretas sem precisar de um cabra intermediário, como bancos ou governos.</p>
+            </section>
+            <section id="impacto-nordeste">
+                <h2>Importância das Criptomoedas para o Nordeste</h2>
+                <p>No Nordeste, onde muitas regiões enfrentam desafios econômicos, as criptomoedas vêm trazendo oportunidades. Com elas, empreendedores locais podem negociar globalmente sem as taxas abusivas dos bancos tradicionais.</p>
+            </section>
+        </div>
+        <div class="section-container">
+            <section id="vantagens">
+                <h2>Vantagens de Investir em Criptomoedas</h2>
+                <ul>
+                    <li>Transações rápidas e seguras, sem precisar de banco.</li>
+                    <li>Diversificação dos investimentos.</li>
+                    <li>Proteção contra inflação e desvalorização da moeda.</li>
+                    <li>Acesso a mercados globais sem precisar sair de casa.</li>
+                </ul>
+            </section>
+            <section id="politica">
+                <h2>O Impacto das Criptomoedas na Política</h2>
+                <p>As criptomoedas mudaram a forma como governos e instituições financeiras operam. No Brasil, algumas cidades já aceitam pagamentos com criptomoedas.</p>
+            </section>
+        </div>
+        <div class="section-container">
+            <section id="cuidados">
+                <h2>Cuidados ao Investir</h2>
+                <p>Antes de se jogar de cabeça, estude bem o mercado e não invista mais do que pode perder, visse? Evite promessas de dinheiro fácil e aprenda sobre segurança digital.</p>
+            </section>
+        </div>
     </main>
     <footer class="footer text-center">
         <div class="container">
